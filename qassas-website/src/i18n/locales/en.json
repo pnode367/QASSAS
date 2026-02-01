@@ -1,0 +1,103 @@
+{
+    "nav": {
+      "tech": "Technology",
+      "solutions": "Solutions",
+      "roi": "ROI",
+      "demo": "Request Demo"
+    },
+    "hero": {
+      "pre": "SOVEREIGN DEEP-TECH EXPLORATION",
+      "title": "From Space to the Core",
+      "sub": "We Read What the Earth Has Written",
+      "desc": "Extreme environment intelligence engineered for the heart of the Arabian Shield.",
+      "cta": "Begin Descent"
+    },
+    "layers": {
+      "01": {
+        "tag": "LAYER 01 // 400 KM",
+        "title": "Orbital Intelligence",
+        "desc": "High-bandwidth satellite uplinks beam real-time geological data from the field to your command center.",
+        "stat1": "500k km² Coverage",
+        "stat2": "256 Spectral Bands"
+      },
+      "02": {
+        "tag": "LAYER 02 // 2 KM",
+        "title": "Aerial Precision",
+        "desc": "Autonomous drone swarms work in synchronization, identifying anomalies with surgical precision.",
+        "stat1": "24/7 Autonomy",
+        "stat2": "50cm Resolution"
+      },
+      "03": {
+        "tag": "LAYER 03 // SURFACE",
+        "title": "Ground Robotics",
+        "desc": "Quadrupedal systems navigate uncharted hazardous terrains without human intervention or GPS.",
+        "stat1": "+55°C Tolerance",
+        "stat2": "IP68 Protection"
+      },
+      "04": {
+        "tag": "LAYER 04 // SUBSURFACE",
+        "title": "The Abyss",
+        "desc": "LIBS Spectral Analysis identifies the chemical fingerprint of gold and lithium in real-time.",
+        "stat1": "<10ppm Gold Limit",
+        "stat2": "300m Detection"
+      }
+    },
+    "cta": {
+    "whitepaper": "Read the White Paper",
+    "consult": "Request Strategic Consultation"
+  },
+  "mission": {
+    "title": "Intelligence Engineered for the Impossible.",
+    "body": "For decades, the most advanced robotic intelligences were built to survive the harsh, unpredictable environments of deep space. Today, QASSAS brings that same extreme-environment intelligence to mining. Our autonomous systems don't just explore—they analyze, map, and predict, transforming geological exploration into a high-precision, sovereign science."
+  },
+  "roi": {
+    "title": "Sovereign ROI Calculator",
+    "drillingLabel": "Total Planned Drilling (Meters)",
+    "traditional": "TRADITIONAL ESTIMATE",
+    "optimized": "QASSAS OPTIMIZED SYSTEM",
+    "note": "* 50% REDUCTION IN DRY-HOLE EXPOSURE"
+  },
+  "ctaBlock": {
+    "title": "Ready to Discover What Lies Beneath?",
+    "desc": "Join the new era of sovereign geological exploration."
+  },
+  "whitepaper": {
+    "title": "The Sovereign White Paper",
+    "desc": "The Space-to-Earth Framework. A technical deep-dive into sovereign geological intelligence.",
+    "previewTitle": "PREVIEW",
+    "b1": "Complete technical architecture of the QASSAS ecosystem",
+    "b2": "ROI analysis for mining exploration operations",
+    "b3": "Integration pathways for existing geological workflows",
+    "formTitle": "DOWNLOAD",
+    "downloadMock": "Download PDF (Mock)",
+    "backToTech": "← Back to Technology"
+  },
+  "demo": {
+    "title": "Request Demo",
+    "desc": "Talk to us about sovereign initiatives, partnerships, or deployment.",
+    "submitMock": "Submit (Mock)"
+  },
+  "forms": {
+    "fullname": "Full Name",
+    "email": "Email",
+    "company": "Company/Organization",
+    "interest": "Interest Area",
+    "interest_b2b": "B2B Mining Partnership",
+    "interest_g2g": "G2G Sovereign Initiative",
+    "interest_licensing": "Technology Licensing",
+    "interest_investment": "Investment Inquiry",
+    "interest_other": "Other",
+    "message": "Message (optional)"
+  },
+  "footer": {
+    "tagline": "We Read What the Earth Has Written",
+    "locationTitle": "LOCATION",
+    "locationLine1": "Riyadh, KSA",
+    "locationLine2": "Arabian Shield",
+    "sovereignTitle": "Sovereign Data",
+    "sovereignLine1": "100% On-Premise Storage",
+    "sovereignLine2": "End-to-End Encryption",
+    "contactTitle": "CONTACT",
+    "contactEmail": "ops@qassas.io"
+  }
+  }

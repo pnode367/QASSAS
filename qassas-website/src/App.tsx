@@ -1,22 +1,28 @@
-import { Navbar } from './components/layout/Navbar';
-import { Hero } from './components/sections/Hero';
-import { TechShowcase } from './components/sections/TechShowcase';
-import { ROICalculator } from './components/sections/ROICalculator';
+import { Routes, Route, Navigate } from "react-router-dom";
+import { ScrollToHash } from "./components/routing/ScrollToHash";
+import { DirManager } from "./components/routing/DirManager";
 
-function App() {
+import { HomePage } from "./pages/HomePage";
+import { WhitePaperPage } from "./pages/WhitePaperPage";
+import { RequestDemoPage } from "./pages/RequestDemoPage";
+
+export default function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <Hero />
-      <TechShowcase />
-      <ROICalculator />
-      
-      {/* Footer Placeholder */}
-      <footer className="bg-brand-900 text-slate-400 py-12 text-center border-t border-white/10">
-        <p>&copy; {new Date().getFullYear()} Qassas Exploration Technologies. All rights reserved.</p>
-      </footer>
-    </div>
+    <>
+      <DirManager />
+      <ScrollToHash />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/white-paper" element={<WhitePaperPage />} />
+        <Route path="/request-demo" element={<RequestDemoPage />} />
+
+        {/* Optional convenience routes */}
+        <Route path="/roi" element={<Navigate to="/#roi" replace />} />
+        <Route path="/technology" element={<Navigate to="/#technology" replace />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
   );
 }
-
-export default App;

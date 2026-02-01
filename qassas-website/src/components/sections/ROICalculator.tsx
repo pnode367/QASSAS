@@ -1,78 +1,50 @@
-import { useState } from 'react';
-import { Button } from '../ui/Button';
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function ROICalculator() {
-  const [budget, setBudget] = useState(5); // Millions
-  const [duration, setDuration] = useState(24); // Months
+  const { t } = useTranslation();
+  const [drillingDepth, setDrillingDepth] = useState(1000);
 
-  // Simple Logic based on spec: Savings = (Budget / 12 * Duration) * 0.5
-  const estimatedSavings = ((budget / 12) * duration * 0.5).toFixed(1);
-  const timeSaved = Math.round(duration * 0.31);
+  const traditionalCost = drillingDepth * 250;
+  const qassasCost = traditionalCost * 0.5;
 
   return (
-    <section className="py-24 bg-brand-light" id="roi">
+    <section id="roi" className="py-24 bg-space-black border-t border-white/5 relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
-          <div className="grid md:grid-cols-2">
-            <div className="p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-brand-900 mb-6">Calculate Your Impact</h2>
-              <p className="text-slate-600 mb-8">
-                See how much you can save by switching to Qassas autonomous exploration.
-              </p>
+        <div className="mb-16">
+          <h2 className="text-4xl font-black text-white uppercase tracking-tighter">{t("roi.title")}</h2>
+          <p className="text-cyber-cyan font-mono text-sm mt-2">[ ANALYSIS_MODULE: READY ]</p>
+        </div>
 
-              <div className="space-y-8">
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
-                    Exploration Budget ($M): <span className="text-brand-accent font-bold">${budget}M</span>
-                  </label>
-                  <input
-                    type="range"
-                    min="1"
-                    max="50"
-                    value={budget}
-                    onChange={(e) => setBudget(Number(e.target.value))}
-                    className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-accent"
-                  />
-                </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="hud-border hud-corner p-8 bg-white/5 backdrop-blur-md">
+            <label className="block font-mono text-xs text-white/60 mb-4 uppercase">
+              {t("roi.drillingLabel")}
+            </label>
 
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
-                    Project Duration (Months): <span className="text-brand-accent font-bold">{duration} mo</span>
-                  </label>
-                  <input
-                    type="range"
-                    min="6"
-                    max="60"
-                    value={duration}
-                    onChange={(e) => setDuration(Number(e.target.value))}
-                    className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-accent"
-                  />
-                </div>
-              </div>
+            <input
+              type="range"
+              min="100"
+              max="10000"
+              step="100"
+              value={drillingDepth}
+              onChange={(e) => setDrillingDepth(Number(e.target.value))}
+              className="w-full h-2 bg-deep-navy rounded-lg appearance-none cursor-pointer accent-gold-accent mb-6"
+            />
 
-              <div className="mt-8 p-4 bg-yellow-50 text-yellow-800 rounded-lg text-sm">
-                *Estimates based on average savings of 50% in logistics and 30% in time reduction.
-              </div>
+            <div className="text-5xl font-black text-white font-mono">{drillingDepth}m</div>
+          </div>
+
+          <div className="grid gap-4">
+            <div className="p-6 bg-white/5 border-l-4 border-white/20">
+              <div className="text-xs font-mono text-white/40 mb-1">{t("roi.traditional")}</div>
+              <div className="text-2xl font-bold text-white/80">${traditionalCost.toLocaleString()}</div>
             </div>
 
-            <div className="bg-brand-900 p-8 md:p-12 text-white flex flex-col justify-center">
-              <h3 className="text-xl font-medium text-slate-400 mb-8">Projected Results</h3>
-              
-              <div className="space-y-6">
-                <div>
-                  <p className="text-sm text-slate-400 mb-1">Estimated Cost Savings</p>
-                  <p className="text-5xl font-bold text-brand-accent">${estimatedSavings}M</p>
-                </div>
-                
-                <div className="w-full h-px bg-white/10" />
-                
-                <div>
-                  <p className="text-sm text-slate-400 mb-1">Time Saved</p>
-                  <p className="text-4xl font-bold text-white">{timeSaved} Months</p>
-                </div>
-              </div>
-
-              <Button className="mt-10 w-full">Download Full Report</Button>
+            <div className="p-6 bg-gold-accent/10 border-l-4 border-gold-accent animate-pulse">
+              <div className="text-xs font-mono text-gold-accent mb-1">{t("roi.optimized")}</div>
+              <div className="text-4xl font-black text-gold-accent">${qassasCost.toLocaleString()}</div>
+              <div className="text-[10px] font-mono mt-2 text-gold-accent/60">{t("roi.note")}</div>
             </div>
           </div>
         </div>
