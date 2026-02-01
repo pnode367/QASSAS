@@ -1,4 +1,4 @@
-import { ArrowRight, Globe } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { motion } from 'framer-motion';
 
