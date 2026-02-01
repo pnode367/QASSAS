@@ -37,10 +37,10 @@ export function HomePage() {
 
         {/* TECHNOLOGY LAYERS */}
         <section id="technology">
-          <LayerSection id="orbit" layerKey="01" image="/assets/layer-orbit.jpg" />
-          <LayerSection id="atmosphere" layerKey="02" image="/assets/layer-atmosphere.jpg" reverse />
-          <LayerSection id="surface" layerKey="03" image="/assets/layer-surface.jpg" />
-          <LayerSection id="abyss" layerKey="04" image="/assets/layer-abyss.jpg" reverse />
+          <LayerSection id="orbit" layerKey="01" image="/assets/layer-orbit.png" />
+          <LayerSection id="atmosphere" layerKey="02" image="/assets/layer-atmosphere.png" reverse />
+          <LayerSection id="surface" layerKey="03" image="/assets/layer-surface.png" />
+          <LayerSection id="abyss" layerKey="04" image="/assets/layer-abyss.png" reverse />
         </section>
 
         {/* ROI */}
