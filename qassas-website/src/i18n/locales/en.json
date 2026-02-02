@@ -1,50 +1,105 @@
 {
-    "nav": {
-      "tech": "Technology",
-      "solutions": "Solutions",
-      "roi": "ROI",
-      "demo": "Request Demo"
+  "nav": {
+    "tech": "Technology",
+    "solutions": "Solutions",
+    "roi": "ROI",
+    "demo": "Request Demo",
+    "caseStudies": "Case Studies",
+    "about": "About",
+    "whitepaper": "White Paper"
+  },
+  "hero": {
+    "pre": "SOVEREIGN DEEP-TECH EXPLORATION",
+    "title": "From Space to the Core",
+    "sub": "We Read What the Earth Has Written",
+    "desc": "Extreme environment intelligence engineered for the heart of the Arabian Shield.",
+    "cta": "Begin Descent",
+    "whitepaperCta": "Read the White Paper"
+  },
+"common": {
+    "capacity": "Capacity",
+    "resolution": "Precision",
+    "latency": "Latency"
+  },
+  "layers": {
+    "01": {
+      "tag": "LAYER 01 // 400 KM",
+      "title": "Orbital Intelligence",
+      "desc": "High-bandwidth satellite uplinks beam real-time geological data from the field to your command center.",
+      "sysRef": "SAT-UPLINK-ALPHA",
+      "stat1": "500k km²",
+      "stat2": "256 Bands",
+      "stat3": "< 200ms",
+      "spec1": "Hyperspectral Imaging",
+      "spec2": "Thermal Mapping",
+      "spec3": "SWIR/VNIR Sensors"
     },
-    "hero": {
-      "pre": "SOVEREIGN DEEP-TECH EXPLORATION",
-      "title": "From Space to the Core",
-      "sub": "We Read What the Earth Has Written",
-      "desc": "Extreme environment intelligence engineered for the heart of the Arabian Shield.",
-      "cta": "Begin Descent"
+    "02": {
+      "tag": "LAYER 02 // 2 KM",
+      "title": "Aerial Precision",
+      "desc": "Autonomous drone swarms work in synchronization, identifying anomalies with surgical precision.",
+      "sysRef": "DRONE-SWARM-BETA",
+      "stat1": "24/7 Autonomy",
+      "stat2": "50cm Res",
+      "stat3": "Zero Pilot",
+      "spec1": "LiDAR Scanning",
+      "spec2": "Magnetometry",
+      "spec3": "Collision Avoidance"
     },
-    "layers": {
-      "01": {
-        "tag": "LAYER 01 // 400 KM",
-        "title": "Orbital Intelligence",
-        "desc": "High-bandwidth satellite uplinks beam real-time geological data from the field to your command center.",
-        "stat1": "500k km² Coverage",
-        "stat2": "256 Spectral Bands"
-      },
-      "02": {
-        "tag": "LAYER 02 // 2 KM",
-        "title": "Aerial Precision",
-        "desc": "Autonomous drone swarms work in synchronization, identifying anomalies with surgical precision.",
-        "stat1": "24/7 Autonomy",
-        "stat2": "50cm Resolution"
-      },
-      "03": {
-        "tag": "LAYER 03 // SURFACE",
-        "title": "Ground Robotics",
-        "desc": "Quadrupedal systems navigate uncharted hazardous terrains without human intervention or GPS.",
-        "stat1": "+55°C Tolerance",
-        "stat2": "IP68 Protection"
-      },
-      "04": {
-        "tag": "LAYER 04 // SUBSURFACE",
-        "title": "The Abyss",
-        "desc": "LIBS Spectral Analysis identifies the chemical fingerprint of gold and lithium in real-time.",
-        "stat1": "<10ppm Gold Limit",
-        "stat2": "300m Detection"
-      }
+    "03": {
+      "tag": "LAYER 03 // SURFACE",
+      "title": "Ground Robotics",
+      "desc": "Quadrupedal systems navigate uncharted hazardous terrains without human intervention or GPS.",
+      "sysRef": "ROVER-UNIT-GAMMA",
+      "stat1": "+55°C Heat",
+      "stat2": "IP68 Rated",
+      "stat3": "12hr Battery",
+      "spec1": "XRF Analysis",
+      "spec2": "Autonomous Nav",
+      "spec3": "Sample Collection"
     },
-    "cta": {
-    "whitepaper": "Read the White Paper",
-    "consult": "Request Strategic Consultation"
+    "04": {
+      "tag": "LAYER 04 // SUBSURFACE",
+      "title": "The Abyss",
+      "desc": "LIBS Spectral Analysis identifies the chemical fingerprint of gold and lithium in real-time.",
+      "sysRef": "DEEP-SENSE-DELTA",
+      "stat1": "<10ppm Gold",
+      "stat2": "300m Depth",
+      "stat3": "Real-time",
+      "spec1": "LIBS Laser",
+      "spec2": "Seismic Sensors",
+      "spec3": "Core Logging"
+    }
+  },
+
+  "caseStudy": {
+    "tag": "CASE STUDY",
+    "title": "A New Golden Age",
+    "desc": "Traditional prospecting in remote regions is slow, expensive, and error-prone. QASSAS shifts exploration to autonomous 24/7 operation with consistent data quality.",
+    "resultLabel": "THE RESULT",
+    "resultVal": "+30%",
+    "resultDesc": "Increase in discovery speed",
+    "opLabel": "OPERATION",
+    "opVal": "24/7",
+    "opDesc": "Autonomous uptime",
+    "impactLabel": "IMPACT",
+    "impactVal": "LOW",
+    "impactDesc": "Surface disturbance",
+    "quote": "“Qassas technology has transformed our exploration program. What used to take years now takes months.”",
+    "author": "[Name], [Title], [Mining Company]"
+  },
+  "pillars": {
+    "pre": "[ QASSAS ADVANTAGE ]",
+    "title": "Why Space Tech for Mining?",
+    "p1_title": "Precision Targeting",
+    "p1_desc": "Reduce 'dry' drilling by up to 50% through high-fidelity subsurface 3D imaging.",
+    "p1_stat": "50% REDUCTION IN DRY DRILLING",
+    "p2_title": "Safety First",
+    "p2_desc": "Deploy autonomous units into hazardous zones where humans cannot safely tread.",
+    "p2_stat": "ZERO HUMAN EXPOSURE",
+    "p3_title": "Absolute Sustainability",
+    "p3_desc": "Minimally invasive exploration with near-zero surface footprint until certainty.",
+    "p3_stat": "NEAR-ZERO FOOTPRINT"
   },
   "mission": {
     "title": "Intelligence Engineered for the Impossible.",
@@ -56,6 +111,10 @@
     "traditional": "TRADITIONAL ESTIMATE",
     "optimized": "QASSAS OPTIMIZED SYSTEM",
     "note": "* 50% REDUCTION IN DRY-HOLE EXPOSURE"
+  },
+  "cta": {
+    "whitepaper": "Read the White Paper",
+    "consult": "Request Strategic Consultation"
   },
   "ctaBlock": {
     "title": "Ready to Discover What Lies Beneath?",
@@ -89,6 +148,30 @@
     "interest_other": "Other",
     "message": "Message (optional)"
   },
+  "snapshot": {
+    "title_pre": "[ COMMAND SNAPSHOT ]",
+    "title": "Live System Indicators",
+    "stats": {
+      "coverage": "km² Coverage Capacity",
+      "bands": "Spectral Bands",
+      "detection": "Gold Detection Limit",
+      "autonomy": "Operational Autonomy"
+    },
+    "testimonial": {
+      "label": "QUOTE BLOCK",
+      "quote": "Qassas has transformed our exploration workflow. We moved from months of uncertainty to actionable targets in days.",
+      "author": "— [Name], [Title], [Mining Company]"
+    },
+    "feed": {
+      "title": "[ LIVE FEED ]",
+      "note": "*Mock telemetry feed for MVP preview.",
+      "m1": "Uplink established: ORBITAL NODE-01",
+      "m2": "Hyperspectral sweep completed: GRID A-17",
+      "m3": "Anomaly detected: Fe/Au signature (confidence 0.91)",
+      "m4": "Tasking drone swarm: JANAH units -> waypoint 24.7136N",
+      "m5": "Telemetry synced: ATHAR rover battery 82%"
+    }
+  },
   "footer": {
     "tagline": "We Read What the Earth Has Written",
     "locationTitle": "LOCATION",
@@ -100,4 +183,4 @@
     "contactTitle": "CONTACT",
     "contactEmail": "ops@qassas.io"
   }
-  }
+}
