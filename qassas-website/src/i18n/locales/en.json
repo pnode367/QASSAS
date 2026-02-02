@@ -9,13 +9,28 @@
     "whitepaper": "White Paper"
   },
   "hero": {
-    "pre": "SOVEREIGN DEEP-TECH EXPLORATION",
-    "title": "From Space to the Core",
-    "sub": "We Read What the Earth Has Written",
-    "desc": "Extreme environment intelligence engineered for the heart of the Arabian Shield.",
-    "cta": "Begin Descent",
-    "whitepaperCta": "Read the White Paper"
+  "pre": "SOVEREIGN DEEP-TECH EXPLORATION",
+  "title": "From Space to the Core",
+  "sub": "We Read What the Earth Has Written",
+  "desc": "Extreme environment intelligence engineered for the Arabian Shield, transforming raw geological signals into sovereign mineral discovery.",
+  "cta": "Begin Descent",
+  "whitepaperCta": "Technical White Paper",
+  "scroll": "SCROLL_TO_DESCEND",
+  "hud": {
+    "live": "LIVE_FEED",
+    "status": "Signal Status",
+    "integrity": "Data Integrity",
+    "disclaimer": "Autonomous node synchronization active. 100% On-Premise data processing."
   },
+  "spec": {
+    "01_label": "Sensor Depth",
+    "01_val": "300M+ AGL",
+    "02_label": "Confidence",
+    "02_val": "0.98 SIGMA",
+    "03_label": "Compute",
+    "03_val": "EDGE_AI"
+  }
+},
 "common": {
     "capacity": "Capacity",
     "resolution": "Precision",
