@@ -1,4 +1,4 @@
-
+// Navbar.tsx
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -15,31 +15,57 @@ function NavLinks({ isAr, onToggleLang }: NavLinksProps) {
 
   return (
     <>
-      <Link to="/#technology" className="text-slate-300 hover:text-white transition-colors">
-        {t("nav.tech")}
+      <Link
+        to="/#problem"
+        className="text-slate-300 transition-colors hover:text-white"
+      >
+        {t("nav.problem")}
       </Link>
-      <Link to="/#solutions" className="text-slate-300 hover:text-white transition-colors">
-        {t("nav.solutions")}
+
+      <Link
+        to="/#robot-specs"
+        className="text-slate-300 transition-colors hover:text-white"
+      >
+        {t("nav.robotSpecs")}
       </Link>
-      <Link to="/#case-studies" className="text-slate-300 hover:text-white transition-colors">
-        {t("nav.caseStudies")}
+
+      <Link
+        to="/#satellite"
+        className="text-slate-300 transition-colors hover:text-white"
+      >
+        {t("nav.satellite")}
       </Link>
-      <Link to="/#about" className="text-slate-300 hover:text-white transition-colors">
-        {t("nav.about")}
+
+      <Link
+        to="/#comparison"
+        className="text-slate-300 transition-colors hover:text-white"
+      >
+        {t("nav.comparison")}
       </Link>
-      <Link to="/white-paper" className="text-slate-300 hover:text-white transition-colors">
+
+      <Link
+        to="/#esg"
+        className="text-slate-300 transition-colors hover:text-white"
+      >
+        {t("nav.esg")}
+      </Link>
+
+      <Link
+        to="/white-paper"
+        className="text-slate-300 transition-colors hover:text-white"
+      >
         {t("nav.whitepaper")}
       </Link>
 
       <button
         type="button"
         onClick={onToggleLang}
-        className="text-slate-300 hover:text-white transition-colors font-medium"
+        className="font-medium text-slate-300 transition-colors hover:text-white"
       >
         {isAr ? "EN" : "العربية"}
       </button>
 
-      <Button to="/contact" variant="primary" className="py-2 px-4 text-sm">
+      <Button to="/contact" variant="primary" className="px-4 py-2 text-sm">
         {t("nav.demo")}
       </Button>
     </>
@@ -53,16 +79,15 @@ export function Navbar() {
 
   const isAr = i18n.language === "ar";
 
-  // Update external system (document dir/lang)
   useEffect(() => {
     document.documentElement.dir = isAr ? "rtl" : "ltr";
     document.documentElement.lang = isAr ? "ar" : "en";
   }, [isAr]);
 
-  // Close mobile menu only when navigation happens
   useEffect(() => {
-    if (isOpen) setIsOpen(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (isOpen) {
+      setIsOpen(false);
+    }
   }, [location.pathname, location.hash]);
 
   const toggleLang = () => {
@@ -70,26 +95,31 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-brand-900/80 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-display font-bold text-white tracking-wide">
+    <nav className="fixed z-50 w-full border-b border-white/10 bg-brand-900/80 backdrop-blur-md">
+      <div className="container mx-auto flex h-20 items-center justify-between px-6">
+        <Link
+          to="/"
+          className="font-display text-2xl font-bold tracking-wide text-white"
+        >
           QASSAS<span className="text-brand-accent">.</span>
         </Link>
 
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden items-center gap-8 md:flex">
           <NavLinks isAr={isAr} onToggleLang={toggleLang} />
         </div>
 
-        {/* Mobile toggle */}
-        <button type="button" onClick={() => setIsOpen((v) => !v)} className="md:hidden text-white">
+        <button
+          type="button"
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="text-white md:hidden"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+        >
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
 
-      {/* Mobile */}
       {isOpen && (
-        <div className="md:hidden bg-brand-900 border-b border-white/10 py-4 px-6 space-y-4">
+        <div className="space-y-4 border-b border-white/10 bg-brand-900 px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
             <NavLinks isAr={isAr} onToggleLang={toggleLang} />
           </div>
