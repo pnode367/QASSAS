@@ -23,11 +23,11 @@ export function Hero() {
 
   const drift = useMemo(() => {
     const seconds = Math.floor(now.getTime() / 1000);
-    
+
     // Use a deterministic "pseudo-random" value based on the current second
     // or just call Math.random() here since useMemo isolates it from the render loop.
     const randomIntegrity = 98 + (Math.abs(Math.sin(seconds)) * 1.98);
-  
+
     return {
       lat: (24.7136 + Math.sin(seconds / 7) * 0.0016).toFixed(4),
       lon: (46.6753 + Math.cos(seconds / 11) * 0.0011).toFixed(4),
@@ -87,19 +87,17 @@ export function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-8">
-        <div 
+        <div
           dir={isAr ? "rtl" : "ltr"}
-          className={`max-w-4xl transition-all duration-700 ${
-            isAr ? "mr-0 ml-auto text-right md:pr-16 lg:pr-32" : "ml-0 mr-auto text-left md:pl-16 lg:pl-32"
-          }`}
+          className={`max-w-4xl transition-all duration-700 ${isAr ? "mr-0 ml-auto text-right md:pr-16 lg:pr-32" : "ml-0 mr-auto text-left md:pl-16 lg:pl-32"
+            }`}
         >
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, x: isAr ? 20 : -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className={`inline-flex items-center gap-3 px-4 py-1.5 bg-cyber-cyan/10 backdrop-blur-md border-y border-white/10 ${
-              isAr ? "border-r-2 border-cyber-cyan" : "border-l-2 border-cyber-cyan"
-            }`}
+            className={`inline-flex items-center gap-3 px-4 py-1.5 bg-cyber-cyan/10 backdrop-blur-md border-y border-white/10 ${isAr ? "border-r-2 border-cyber-cyan" : "border-l-2 border-cyber-cyan"
+              }`}
           >
             <span className="font-mono text-[11px] font-black uppercase tracking-[0.3em] text-cyber-cyan">
               {t("hero.pre")}
@@ -114,48 +112,38 @@ export function Hero() {
             <h1 className="text-6xl md:text-[7rem] font-black text-white uppercase tracking-tighter leading-[0.8] drop-shadow-2xl">
               {t("hero.title")}
             </h1>
-            
+
             <div className="mt-6 flex items-center gap-4">
-               <div className="h-0.5 w-12 bg-gold-accent/50" />
-               <div className="text-2xl md:text-4xl font-black text-gold-accent uppercase italic tracking-tight">
+              <div className="h-0.5 w-12 bg-gold-accent/50" />
+              <div className="text-2xl md:text-4xl font-black text-gold-accent uppercase italic tracking-tight">
                 {t("hero.sub")}
               </div>
             </div>
 
             <p className="mt-8 text-white/70 text-lg md:text-2xl font-medium leading-relaxed max-w-2xl">
-              {t("hero.desc")}
+              {t("hero.story.space")}
             </p>
-
-            {/* Explainer Specs (Dummy Tech Data) */}
-            <div className={`mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6 border-t border-white/10 pt-8 ${isAr ? 'text-right' : 'text-left'}`}>
-               <div>
-                  <div className="text-cyber-cyan font-mono text-[10px] uppercase tracking-widest">{t("hero.spec.01_label")}</div>
-                  <div className="text-white font-black text-lg">{t("hero.spec.01_val")}</div>
-               </div>
-               <div>
-                  <div className="text-cyber-cyan font-mono text-[10px] uppercase tracking-widest">{t("hero.spec.02_label")}</div>
-                  <div className="text-white font-black text-lg">{t("hero.spec.02_val")}</div>
-               </div>
-               <div className="hidden sm:block">
-                  <div className="text-cyber-cyan font-mono text-[10px] uppercase tracking-widest">{t("hero.spec.03_label")}</div>
-                  <div className="text-white font-black text-lg">{t("hero.spec.03_val")}</div>
-               </div>
-            </div>
+            <p className="mt-4 text-white/70 text-lg md:text-2xl font-medium leading-relaxed max-w-2xl">
+              {t("hero.story.ground")}
+            </p>
+            <p className="mt-4 text-white/70 text-lg md:text-2xl font-medium leading-relaxed max-w-2xl">
+              {t("hero.story.depths")}
+            </p>
 
             {/* CTAs */}
             <div className="mt-12 flex flex-col sm:flex-row gap-6">
               <Button
-                to="/#orbit"
+                to="/#problem"
                 className="text-lg px-10 py-6 font-black uppercase tracking-widest shadow-[0_0_50px_rgba(0,212,255,0.2)]"
               >
-                {t("hero.cta")}
+                {t("hero.primaryCta")}
               </Button>
               <Button
                 to="/white-paper"
                 variant="outline"
                 className="text-lg px-10 py-6 font-black uppercase tracking-widest border-white/20 hover:bg-white/10 backdrop-blur-sm"
               >
-                {t("hero.whitepaperCta")}
+                {t("hero.secondaryCta")}
               </Button>
             </div>
           </motion.div>

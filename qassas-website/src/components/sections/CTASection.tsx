@@ -25,12 +25,18 @@ export function CTASection() {
             {t("ctaBlock.desc")}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            <Button to="/white-paper" className="text-lg px-8">
-              {t("cta.whitepaper")}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+            <Button to="/contact?type=demo" className="text-md px-6 py-4 font-bold">
+              {t("ctaBlock.buttons.demo")}
             </Button>
-            <Button to="/contact" variant="outline" className="text-lg px-8">
-              {t("cta.consult")}
+            <Button to="/white-paper" variant="outline" className="text-md px-6 py-4 font-bold border-white/20">
+              {t("ctaBlock.buttons.whitepaper")}
+            </Button>
+            <Button to="/contact?type=sales" variant="outline" className="text-md px-6 py-4 font-bold border-white/20">
+              {t("ctaBlock.buttons.sales")}
+            </Button>
+            <Button to="/contact?type=consultation" variant="outline" className="text-md px-6 py-4 font-bold border-white/20">
+              {t("ctaBlock.buttons.consultation")}
             </Button>
           </div>
         </motion.div>

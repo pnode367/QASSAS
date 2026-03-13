@@ -1,38 +1,37 @@
 import { useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Satellite, Scan, Bot, Gem } from "lucide-react";
+import { Satellite, Bot, AlertCircle, GitCompare, Leaf } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { RadialNav, type RadialNavItem } from "@/components/animate-ui/components/community/radial-nav";
 
 const SECTION_BY_ID: Record<number, string> = {
-  1: "orbit",
-  2: "atmosphere",
-  3: "surface",
-  4: "abyss",
+  1: "problem",
+  2: "robot",
+  3: "satellite",
+  4: "comparison",
+  5: "esg",
 };
 
 export function DepthRadialNav() {
-  const { t, i18n } = useTranslation(); // Destructure i18n here
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
 
-  // 1. Check if the current language is RTL (Arabic)
   const isRtl = i18n.dir() === "rtl";
 
   const items: RadialNavItem[] = useMemo(() => {
-    // 2. Base angles for LTR
     const baseItems = [
-      { id: 1, icon: Satellite, label: t("layers.01.title"), angle: 315 },
-      { id: 2, icon: Scan,      label: t("layers.02.title"), angle: 45 },
-      { id: 3, icon: Bot,       label: t("layers.03.title"), angle: 135 },
-      { id: 4, icon: Gem,       label: t("layers.04.title"), angle: 225 },
+      { id: 1, icon: AlertCircle, label: t("hero.sections.problem"), angle: 288 },
+      { id: 2, icon: Bot, label: t("hero.sections.robot"), angle: 0 },
+      { id: 3, icon: Satellite, label: t("hero.sections.satellite"), angle: 72 },
+      { id: 4, icon: GitCompare, label: t("hero.sections.comparison"), angle: 144 },
+      { id: 5, icon: Leaf, label: t("hero.sections.esg"), angle: 216 },
     ];
 
-    // 3. Mirror the angles if RTL (swaps left/right positions)
     if (isRtl) {
       return baseItems.map(item => ({
         ...item,
-        angle: (360 - item.angle) % 360 // Mirrors along the vertical axis
+        angle: (360 - item.angle) % 360
       }));
     }
     return baseItems;
@@ -78,10 +77,9 @@ export function DepthRadialNav() {
   if (location.pathname !== "/") return null;
 
   return (
-    /* 4. Use dynamic positioning: 'right-6' for LTR, 'left-6' for RTL */
     <div className={`fixed top-1/2 -translate-y-1/2 z-40 hidden lg:block ${isRtl ? 'left-6' : 'right-6'}`}>
-      <div 
-        dir={isRtl ? "rtl" : "ltr"} 
+      <div
+        dir={isRtl ? "rtl" : "ltr"}
         className="hud-border hud-corner bg-black/30 backdrop-blur px-12 py-8 border border-white/10 w-fit min-w-70 flex items-center justify-center transition-all duration-500"
       >
         <RadialNav
