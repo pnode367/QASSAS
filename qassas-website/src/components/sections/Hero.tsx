@@ -109,7 +109,7 @@ export function Hero() {
             style={{ x: mx * 10, y: my * 6 - sy * 10 }}
             className="mt-10"
           >
-            <h1 className="text-6xl md:text-[7rem] font-black text-white uppercase tracking-tighter leading-[0.8] drop-shadow-2xl">
+            <h1 className="text-5xl md:text-[3rem] font-black text-white uppercase tracking-tighter leading-[0.8] drop-shadow-2xl">
               {t("hero.title")}
             </h1>
 
